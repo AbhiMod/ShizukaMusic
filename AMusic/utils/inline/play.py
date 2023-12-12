@@ -1,4 +1,4 @@
-from config import  OWNER
+from config import  OWNER, SUPPORT_GROUP
 import math
 
 from pyrogram.types import InlineKeyboardButton
@@ -67,7 +67,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💌", url=config.SUPPORT_GROUP),
+            InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_GROUP}"),
             InlineKeyboardButton(text="💕 ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -78,7 +78,7 @@ def stream_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💌", url=config.SUPPORT_GROUP),
+            InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_GROUP}"),
             InlineKeyboardButton(text="💕 ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
