@@ -8,18 +8,16 @@ from config import LOG_GROUP_ID
 async def play_logs(message, streamtype):
     if await is_on_off(2):
         logger_text = f"""
-<b>{app.mention} 𝖯𝗅𝖺𝗒 𝖫𝗈𝗀</b>
-
-<b>𝖢𝗁𝖺𝗍 𝖨𝖣 :</b> <code>{message.chat.id}</code>
-<b>𝖢𝗁𝖺𝗍 𝖭𝖺𝗆𝖾 :</b> {message.chat.title}
-<b>𝖢𝗁𝖺𝗍 𝖴𝗌𝖾𝗋𝗇𝖺𝗆𝖾 :</b> @{message.chat.username}
-
-<b>𝖴𝗌𝖾𝗋 𝖨𝖣 :</b> <code>{message.from_user.id}</code>
-<b>𝖭𝖺𝗆𝖾 :</b> {message.from_user.mention}
-<b>𝖴𝗌𝖾𝗋𝗇𝖺𝗆𝖾 :</b> @{message.from_user.username}
-
-<b>𝖰𝗎𝖾𝗋𝗒 :</b> {message.text.split(None, 1)[1]}
-<b>𝖲𝗍𝗋𝖾𝖺𝗆-𝖳𝗒𝗉𝖾 :</b> {streamtype}"""
+<b>{app.mention} ᴘʟᴀʏ ʟᴏɢ</b>
+<b>◈ 𝘾𝙝𝙖𝙩 𝙉𝙖𝙢𝙚 ➪ </b> {message.chat.title}
+<b>◈ 𝐂𝐡𝐚𝐭 𝐈𝐝 ➪ </b> `{message.chat.id}`
+<b>◈ 𝐔𝐬𝐞𝐫 ➪ </b> {message.from_user.mention}
+<b>◈ 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞 ➪ </b> @{message.from_user.username}
+<b>◈ 𝐈𝐝 ➪ </b> <code>{message.from_user.id}</code>
+<b>◈ 𝐂𝐡𝐚𝐭 𝐋𝐢𝐧𝐤 ➪ </b> @{message.chat.username}
+<b>◈ 𝐒𝐞𝐚𝐫𝐜𝐡𝐞𝐝 ➪ </b> <code>{message.text.split(None, 1)[1]}</code>
+<b>◈ 𝐁𝐲 ➪ </b> {streamtype}
+╚═══❰ #𝐍𝐞𝐰𝐒𝐨𝐧𝐠 ❱══❍⊱❁۪۪"""
         if message.chat.id != LOG_GROUP_ID:
             try:
                 await app.send_message(
