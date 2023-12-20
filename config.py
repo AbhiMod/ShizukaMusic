@@ -17,7 +17,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "9000"))
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001840241140"))
 OWNER_ID = int(getenv("OWNER_ID", "5360305806"))
 QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", "30"))
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME","shizukamusicbbb")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY","601f56a4-dac8-4f9e-96af-8996ddfff3e2")
 
 UPSTREAM_REPO = getenv(
