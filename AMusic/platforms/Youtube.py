@@ -243,7 +243,7 @@ class YouTubeAPI:
 
         def audio_dl():
             ydl_optssx = {
-                "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
+                "format": "mp3/bestaudio/best",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
